@@ -1,6 +1,6 @@
 export const solarSystemData = {
     Sun: {
-        orbitalPeriod: 0,
+        orbitalPeriod: 1,
         color: "#ffffff",
         diameter: 696000,
         distance: 0,
