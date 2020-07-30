@@ -4,6 +4,38 @@ This is a rapid built using create-react-app to provide a quick and dirty scaffo
 
 As there are a few commitments today, I have therefore broken up the tasks and timeslots into 3 phases. with Preparation set for 30minutes for the 1st phase, building out the app in the 2nd and if time allows writing up a conclusion with may be some improvements.
 
+## HOWTO
+
+Assumed docker is installed and running on computer.
+Buid
+```
+docker-compose build
+```
+
+Run and Build
+```
+docker-compose up --build
+```
+
+Stop
+```
+docker-compose down
+```
+
+#### Alternatively with NPM
+
+Build
+```
+npm install
+```
+
+Run
+```
+npm run start
+```
+
+
+
 ## INDEX
 
 00. [RESEARCH](./docs/00.0_RESEARCH.md)
