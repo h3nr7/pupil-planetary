@@ -8,7 +8,8 @@ services:
       - .:/app:rw
       - /app/node_modules #ignore local node_modules
     environment:
-      - NODE_ENV=development
       - PORT=3000
+      - CHOKIDAR_USEPOLLING=true
+    stdin_open: true  
     command: npm run start
 

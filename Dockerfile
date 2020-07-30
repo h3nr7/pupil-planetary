@@ -1,21 +1,7 @@
-FROM node:13.14.0
-COPY . /app
-
-ADD ./package.json /tmp/package.json
-WORKDIR /tmp
-RUN pwd
-RUN npm cache verify
-RUN npm install webpack -g
-RUN npm install
-
-RUN pwd
-RUN yes | cp -rf /tmp/node_modules /app/
-
+FROM node:13.12.0-alpine
 WORKDIR /app
-
-ENV NODE_ENV=development
-ENV PORT=3000
-
-EXPOSE 3000
-
+ENV PATH /app/node_modules/.bin:$PATH
+COPY package.json ./
+RUN npm install
+COPY . ./
 CMD ["npm", "run", "start"]
